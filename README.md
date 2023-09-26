@@ -1,2 +1,2 @@
 # find_findIndex_exercises
-I wrote function to pass the tests
+I wrote function using Array.find and Array.findIndex to pass the tests
