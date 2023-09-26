@@ -32,14 +32,22 @@ removeUser(users, 'akagen') // undefined
 */
 
 function removeUser(usersArray, username) {
-  return usersArray.find(function(obj){
-    for (i = 0; i < usersArray.length; i++){
-    if (obj.username === username){
-      usersArray.splice(i, 1)
-      return true;
-    }
+  let i = usersArray.findIndex(function(obj){
+    return (obj.username === username);
+  })
+  if (i !== -1){
+    return usersArray.splice(answerIndex, 1)[0];
   }
-})
+  
+
+//     return usersArray.find(function(obj){
+//     for (i = 0; i < usersArray.length; i++){
+//     if (obj.username === username){
+//       usersArray.splice(i, 1)
+//       return true;
+//     }
+//   }
+// })
  //another option
   // return usersArray.find(function(obj){
   //   let i = usersArray.indexOf(obj);
